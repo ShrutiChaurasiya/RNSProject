@@ -1,11 +1,16 @@
 # Read-N-Swap - Online Buying and Selling Books
 DESCRIPTION :
+Welcome to Read Swap, your go-to destination for a literary journey where stories find new homes and knowledge gets passed on. At Read Swap, we believe in the power of sharing stories, embracing the joy of reading, and fostering a community of book lovers.Our mission is simple but profound: to connect book enthusiasts and provide them with a platform to explore, buy, sell, and even rent books. We envision a world where every book has a reader and every reader finds the perfect book.
 
 # TABLE OF CONTENTS:
 About the Project
+
 Features
+
 Built With
+
 Prerequisites 
+
 Admin Control
 
 # About the Project
