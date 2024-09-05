@@ -1,0 +1,133 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+{% load static %}
+{% block body %}
+	{% comment %} <div class="row">
+		<div class="col-lg-12">
+			<div class="box-element">
+
+				<a  class="btn btn-outline-dark" href="{% url 'home' %}">&#x2190; Continue Shopping</a>
+
+				<br>
+				<br>
+				<table class="table">
+				
+					<tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+						<th><h3> Payment Details</h3></th>
+						
+						<th>
+							<a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'home' %}">Exit</a>
+						</th>
+					</tr>
+				</table>
+
+			</div>
+		 {% endcomment %}
+
+			<br>
+			
+
+			<form class="mx-1 mx-md-4 " action="{% url 'rosesbuy' %}" method="post">
+				
+				<div class="d-flex flex-row align-items-center mb-4">
+				  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+				  <div class="form-outline flex-fill mb-0">
+					<label class="form-label" for="accountname">Account Holder Name</label>
+					<input type="text" id="1"  name="accountname" class="form-control" required/>
+				  </div>
+				</div>
+                
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                  <div class="form-outline flex-fill mb-0">
+                    <label class="form-label" for="bname">Enter Bank Name</label>
+                    <textarea  class="form-control" id="2"  name="bname" value=""required></textarea>
+                  </div>
+                </div>
+
+				<div class="d-flex flex-row align-items-center mb-4">
+				  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+				  <div class="form-outline flex-fill mb-0">
+					<label class="form-label" for="cvv">Enter cvv</label>
+					<input type="password" maxlength="3"  name="cvv" id="3" class="form-control"required />
+				  </div>
+				</div>
+
+
+				<div class="d-flex flex-row align-items-center mb-4">
+				  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+				  <div class="form-outline flex-fill mb-0">
+					<label class="form-label" for="Branch">Branch</label>
+					<input type="text"   name="Branch" class="form-control" id="4" required />
+				  </div>
+				</div>
+
+				<div class="d-flex flex-row align-items-center mb-4">
+				  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+				  <div class="form-outline flex-fill mb-0">
+					<label class="form-label" for="Email">Email</label>
+					<input type="email" name="Email" class="form-control" id="4" required />
+				  </div>
+				</div>
+
+				<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+				 
+                    <button class="btn btn-info btn-lg btn-block" onclick="myfunc()">Buy</button> &nbsp;&nbsp; 
+				  <a href="{% url 'home' %}" class="btn btn-danger btn-lg">Cancel</a>
+				</div>
+
+			  </form>
+
+			</div>
+			<!-- <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+			  <img src="{% static 'images\rosesbloodred.jpg' %}"
+				class="img-fluid" alt="Sample image">
+
+			</div> -->
+</div>
+</div>
+</div>
+
+</form>
+		</div>
+	</div>
+    <script>
+        function myfunc() {
+    // Get references to all required input fields
+    const accountname = document.getElementById('1');
+    const bname = document.getElementById('2');
+    const cvv= document.getElementById('3');
+    const Branch = document.getElementById('4');
+
+    // Check if all fields are filled
+    if (accountname.value.trim() === '' ||
+    bname.value.trim() === '' ||
+    cvv.value.trim() === '' ||
+    Branch.value.trim() === '') {
+        // If any field is empty, display an alert
+        alert('Please fill out all fields.');
+    } else {
+        // If all fields are filled, redirect to the home page
+        alert("Thank You For Ordering From Read-N-Swap")
+        window.location.href = 'http://127.0.0.1:8000/';
+    }
+}
+
+          
+        
+        </script>
+{% endblock body %}

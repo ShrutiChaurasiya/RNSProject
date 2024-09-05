@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Glidejs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="static/css/styles.css">
+
+  <title>Read N Swap</title>
+  
+  <style>
+  .header {
+    min-height: 100vh;
+    background: linear-gradient(to top,
+        rgb(17, 117, 231, 0.5),
+        rgba(136, 0, 133, 0.6)),
+      url("static/images/bookk.jpg") center/cover no-repeat fixed;
+    position: relative;
+    z-index: 100;
+  }
+
+  .special__offer {
+    position: relative;
+    height: 40rem;
+    background: linear-gradient(to top,
+        rgb(17, 117, 231, 0.5),
+        rgba(136, 0, 133, 0.6)),
+      url("static/images/bookk.jpg") top/cover no-repeat fixed;
+  }
+</style>
+</head>
+
+<body>
+  <!-- 
+        ========================
+        Header
+        ========================
+     -->
+  <header id="header" class="header">
+    <!-- Navigation -->
+    <div class="navigation">
+      <div class="container">
+        <nav class="nav__center">
+          <div class="nav__header">
+            <div class="nav__logo">
+              <h1>READ<span> N </span>SWAP</h1>
+            </div>
+
+            <div class="nav__hamburger">
+              <span>
+                <svg>
+                  <use xlink:href="static/images/sprite.svg#icon-menu"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="nav__menu">
+            <div class="menu__top">
+              <h1 class="nav__category">READ<span> N </span>SWAP</h1>
+              <div class="close__toggle">
+                <svg>
+                  <use xlink:href="static/images/sprite.svg#icon-cross"></use>
+                </svg>
+              </div>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#header" class="nav__link scroll-link">Home</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#featured" class="nav__link scroll-link">BestSeller Books</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#blog" class="nav__link scroll-link">Blog</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#newsletter" class="nav__link scroll-link">Subscribe</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="{% url 'login' %}" class="nav__link">Login</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="{% url 'register' %}" class="nav__link">Register</a>
+              </li>
+            </ul>
+
+            <ul class="nav__icons">
+              <a href="#" class="icon__item">
+                <svg>
+                  <use xlink:href="static/images/sprite.svg#icon-search"></use>
+                </svg>
+              </a>
+
+              <a href="{% url 'admin_login' %}" class="icon__item">
+                <svg>
+                  <use xlink:href="static/images/sprite.svg#icon-user"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="icon__item">
+                <svg>
+                  <use xlink:href="static/images/sprite.svg#icon-shopping-basket"></use>
+                </svg>
+                <span>2</span>
+              </a>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero" >
+  
+      <div class="hero__content container">
+        <h1>
+          <span>Get Upto <span class="color">30%</span> off on first purchase
+            with</span>
+          <span>READ <span class="color"> N </span> SWAP online Marketplace for Books</span>
+        </h1>
+        <a href="#new__arrival" class="btn btn-hero">Buy now</a>
+      </div>
+
+      <a href="#new__arrival" class="goto__next scroll-link">
+        <span>
+          <svg>
+            <use xlink:href="static/images/sprite.svg#icon-angle-down"></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- New Arrival -->
+   
+    <section class="section new__arrival" id="new__arrival">
+      <div class="arrivals container">
+        <div class="title">
+          <h1 class="primary__title">New Arrivals</h1>
+        </div>
+
+        <div class="arrival__center">
+          <div class="product">
+            <div class="img__container">
+              <img src="{% static 'images\rosesbloodred.jpg' %}" alt="" />
+            </div>
+            <div class="product__bottom">
+              <div class="rating">
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+                  </svg>
+                </span>
+              </div>
+              <h3>Roses Are Blood Red</h3>
+              <a href="{% url 'rosescart' %}" >Add To Cart</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="{% static 'images\somethingsnever.jpg' %}" alt="" />
+            </div>
+            <div class="product__bottom">
+              <div class="rating">
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+                  </svg>
+                </span>
+              </div>
+              <h3>Something I Never Told You</h3>
+              <a href="{% url 'somethingcart' %}">Add To Cart</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="{% static 'images\getepicshit.jpg' %}" alt="" />
+            </div>
+            <div class="product__bottom">
+              <div class="rating">
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+                  </svg>
+                </span>
+              </div>
+              <h3>Get Epic Shit Done</h3>
+              <a href="{% url 'gepiccart' %}">Add To Cart</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="{% static 'images\WhynotMe.jpg' %}" alt="" />
+            </div>
+            <div class="product__bottom">
+              <div class="rating">
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+                  </svg>
+                </span>
+              </div>
+              <h3>Why Not Me ?</h3>
+              <a href="{% url 'wnmecart' %}">Add To Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Slide -->
+    <section class="cart__slide">
+      <div class="arrival__slide container">
+        <div class="glide" id="glide1">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="arrival">
+                  <div class="cart__like">
+                    <div class="image__holder">
+                      <img src="{% static 'images\WhynotMe.jpg' %}" alt="" />
+                    </div>
+                    <div class="cart__details">
+                      <h1>Why Not Me ?</h1>
+                      <p>
+                        A hopeless romantic, Anubhav had been looking for the love of his life. When Zoya accepted his online friend request, he felt an instant connection. Soon, he was falling deeply in love with her.For four years, first as friend and then as boyfriend, Anubhav waited for the day that Zoya would fall for him too. It never came. He had fallen in love with a person who had never really cared about him. He thought that if Zoya ever left him, he would be devastated. Turns out, it was the best gift ever.In Why Not Me? A Feeling of Millions, Anubhav looks back on his roller-coaster ride of being crazy in love to heartbroken, expressing in words what countless others have felt. His message? A broken heart can make you a stronger person.Already a national bestseller, Why Not Me? is a story of learning to love yourself again.
+                      </p>
+                      <div class="rating">
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      
+                      <div class="btn__group">
+                        <button ><a href="{% url 'wnmecart' %}"> Add To Cart</a></button>
+                        <button>₹ 175</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="arrival">
+                  <div class="cart__like">
+                    <div class="image__holder">
+                      <img src="{% static 'images\getepicshit.jpg' %}" alt="" />
+                    </div>
+                    <div class="cart__details">
+                      <h1>Get Epic Shit Done</h1>
+                      <p>
+                        DO EPIC SHIT made you think.
+
+GET EPIC SHIT DONE will make you act!
+
+When he was a college student, Ankur bought a book containing answers to the last 10 years’ question papers. That book helped him prepare for the forthcoming exams.
+
+In his second book, he attempts to create the same book for life.
+
+Written as a conversation between a student and a teacher, GET EPIC SHIT DONE answers 36 life questions that you face almost everyday, questions that you need answers to.
+
+GET EPIC SHIT DONE isn’t just a book that will inspire you – it will visibly improve the way you live.
+                      </p>
+                      <div class="rating">
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+                          </svg>
+                        </span>
+                      </div>
+                     
+                      <div class="btn__group">
+                        <button><a href="{% url 'gepiccart' %}">Add To Cart</a></button>
+                        <button>₹ 195</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="arrival">
+                  <div class="cart__like">
+                    <div class="image__holder">
+                      <img src="{% static 'images\somethingsnever.jpg' %}" alt="" />
+                    </div>
+                    <div class="cart__details">
+                      <h1>Something I Never Told You</h1>
+                      <p>
+                        When in love, you tend to take each other for granted, and sometimes, that can cost you a lifetime of togetherness . . .
+                        Ronnie knew that his first crush was way out of his league, and yet he pursued and wooed Adira. Shyly and from a distance in the beginning, and more persuasively later. He couldn't believe it when the beautiful Adira actually began to reciprocate, falling in love with him for his simplicity and honesty.
+
+                        Slowly, as they get close and comfortable with each other, life takes on another hue. From truly magical it becomes routine. There are fights and then making-up sessions-a clash of egos and doubts.
+
+                        Things begin to change for the worst.
+
+                        It is too late.
+                        Ronnie and Adira will probably never find their forever after . . .
+                      </p>
+                      <div class="rating">
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      
+                      <div class="btn__group">
+                        <button><a href="{% url 'somethingcart' %}">Add To Cart</a></button>
+                        <button>₹ 250</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="arrival">
+                  <div class="cart__like">
+                    <div class="image__holder">
+                      <img src="{% static 'images\rosesbloodred.jpg' %}" alt="" />
+                    </div>
+                    <div class="cart__details">
+                      <h1>Roses Are Blood Red</h1>
+                      <p>
+                        'I'll gift you a love story that every girl desires, but few get to live.'
+
+He'd told me once. And boy, did he stick to his words! Vanav Thakur is the perfect boyfriend that any girl can have. He ticks every box you can ever have for your Mr Right. Trust me on this. He cares for me, respects me, never objectifies me, never says no to me for anything, understands me, is progressive and has no shadow of any male chauvinism in him. Sometimes, I wonder if I really deserve him. My parents, like me, had no option but to accept him as my boyfriend. Everything was hunky dory and I thought I would be that one girl who would never have any relationship hiccup until I stumbled upon the reason behind his perfection.
+
+I'm Aarisha Shergill and my life is about to get ripped apart because I should have known some things should be left alone.
+
+Is love capable of healing the deep wounds which love itself creates within you? Mysteriously thrilling in its essence, Roses Are Blood Red is the haunting story of a passion and eternal love
+                      </p>
+                      <div class="rating">
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                        </span>
+                        <span>
+                          <svg>
+                            <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      
+                      <div class="btn__group">
+                        <button<a href="{% url 'rosescart' %}">Add To Cart</a></button>
+                        <button>₹ 235</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Arrows -->
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              prev
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              next
+            </button>
+          </div>
+
+          <!-- Thumbnails -->
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0">
+              <div class="thumbnail">
+                <img src="{% static 'images\WhynotMe.jpg' %}" alt="" />
+              </div>
+            </button>
+
+            <button class="glide__bullet" data-glide-dir="=1">
+              <div class="thumbnail">
+                <img src="{% static 'images\getepicshit.jpg' %}" alt="" />
+              </div>
+            </button>
+
+            <button class="glide__bullet" data-glide-dir="=2">
+              <div class="thumbnail">
+                <img src="{% static 'images\somethingsnever.jpg' %}" alt="" />
+              </div>
+            </button>
+
+            <button class="glide__bullet" data-glide-dir="=3">
+              <div class="thumbnail">
+                <img src="{% static 'images\rosesbloodred.jpg' %}" alt="" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <section class="section special__offer">
+      <div class="offer__container">
+        <h1>SPECIAL OFFER</h1>
+        <p>Special Offer Discount valid for Only this Week</p>
+        <a href="#header">SHOP NOW</a>
+      </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="section featured" id="featured">
+      <div class="featured__container container">
+        <div class="title">
+          <h1 class="primary__title">BestSeller Books </h1>
+        </div>
+
+        <form method="post" action="">
+
+
+        <div class="featured__center">
+          {% for i in front_obj %}
+          <div class="product">
+            <div class="img__container">
+              <img src="media\{{i.bookimage}}" alt="book img" class="img-cover"/>
+            </div>
+            <div class="product__bottom">
+              <div class="rating">
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+                  </svg>
+                </span>
+              </div>
+              <h3>{{i.bookname}}</h3>
+              <h4>{{i.book_desc}}</h4>
+              <h5>₹ {{i.book_price}}</h5>
+              <a href="{% url 'cart' i.id %}">Add To Cart</a>
+            </div>
+          </div>
+         
+        {% endfor %}
+      </form>
+    </section>
+
+    <!-- Blog -->
+    <section class="section blog" id="blog">
+      <div class="blog__container container">
+        <div class="title">
+          <h1 class="primary__title">Latest News</h1>
+        </div>
+
+        <div class="blog__center">
+          <div class="blog__box">
+            <div class="img__cover">
+              <img src="{% static 'images\blog1.jpg' %}" alt="" />
+            </div>
+            <div class="box__content">
+              <h2>Here are the trends I see coming this fall</h2>
+              <a href="#">Read more</a>
+            </div>
+          </div>
+
+          <div class="blog__box">
+            <div class="img__cover">
+              <img src="{% static 'images\blog2.jpg' %}" alt="" />
+            </div>
+            <div class="box__content">
+              <h2>Here are the trends I see coming this fall</h2>
+              <a href="#">Read more</a>
+            </div>
+          </div>
+
+          <div class="blog__box">
+            <div class="img__cover">
+              <img src="{% static 'images\blog3.jpg' %}" alt="" />
+            </div>
+            <div class="box__content">
+              <h2>Here are the trends I see coming this fall</h2>
+              <a href="#">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter" id="newsletter">
+      <div class="newsletter__container container">
+        <div class="title">
+          <h1 class="primary__title">Newsletter</h1>
+        </div>
+
+        <div class="newsletter__center">
+          <div class="newsletter__box">
+            <h2>Newsletter</h2>
+            <p>
+              Subscribe to our newsletter and get 20% off your first purchase
+            </p>
+          </div>
+
+          <div class="newsletter__box">
+            <form action="#">
+              <input type="email" placeholder="Your email" />
+              <button>SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+      <br>
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer-top__box">
+            <h3>EXTRAS</h3>
+            <a href="#">Brands</a>
+            <a href="#">Gift Certificates</a>
+            <a href="#">Affiliate</a>
+            <a href="#">Specials</a>
+            <a href="#">Site Map</a>
+          </div>
+          <div class="footer-top__box">
+            <h3>INFORMATION</h3>
+            <a href="{% url 'aboutus' %}">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="{% url 't_c' %}">Terms & Conditions</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'contact' %}">Site Map</a>
+          </div>
+          <div class="footer-top__box">
+            <h3>MY ACCOUNT</h3>
+            <a href="#">My Account</a>
+            <a href="#">Order History</a>
+            <a href="#">Wish List</a>
+            <a href="#">Newsletter</a>
+            <a href="#">Returns</a>
+          </div>
+          <div class="footer-top__box">
+            <h3>CONTACT US</h3>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-location"></use>
+                </svg>
+              </span>
+              09 Book Palace , Mumbai 400001. 
+            </div>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-envelop"></use>
+                </svg>
+              </span>
+            Read N Swap09@gmail.com
+            </div>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-phone"></use>
+                </svg>
+              </span>
+              +91 9654758695
+            </div>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
+                </svg>
+              </span>
+              The Dream City, MUMBAI
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </footer>
+    
+    
+  </main>
+
+  <!-- Glidejs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="./js/slider.js"></script>
+  <script src="./js/index.js"></script>
+
+  <script>
+    // JavaScript function to redirect to a new page
+    function redirectToPage(pageURL) {
+      window.location.href = pageURL;
+    }
+  </script>
+
+</body>
+
+</html>

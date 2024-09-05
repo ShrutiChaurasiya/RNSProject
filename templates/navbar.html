@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Glidejs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="static/css/styles.css">
+  
+  <style>
+    .navigation {
+      position:relative;
+      padding: 1.3rem ;
+    
+    }
+    
+    .fix__nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      background-color: var(--white);
+      box-shadow: 0 5px 15px rgba(35, 34, 34, 0.2);
+    }
+    
+    .nav__center .nav__hamburger {
+      display: none;
+      cursor: pointer;
+    }
+    
+    .nav__menu .menu__top {
+      display: none;
+    }
+    
+    .nav__center {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      align-items: center;
+    }
+    
+    .nav__header .nav__logo h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color:cornflowerblue;
+    }
+    
+    .fix__nav .nav__logo h1 {
+      color: var(--dark-color);
+    }
+    
+    .nav__header .nav__logo h1 span {
+      color: var(--default-color);
+    }
+    
+    .nav__menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav__menu .nav__list {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+    }
+    
+    .nav__list .nav__item:not(:last-child) {
+      margin-right: 1.1rem;
+    }
+    
+    .nav__item .nav__link:link,
+    .nav__item .nav__link:visited {
+      display: inline-block;
+      color: var(--grey-color);
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.1px;
+    }
+    
+   
+    
+    
+    
+    
+    /* =========== Navigation Media Query ============ */
+    
+    
+    
+    @media only screen and (max-width: 768px) {
+      .navigation {
+        background-color: var(--white);
+      }
+    
+      .nav__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+    
+      .nav__menu {
+        position: fixed;
+        top: 0;
+        left: -40rem;
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        transition: all 0.3s ease-in-out;
+      }
+    
+      .nav__menu .menu__top .close__toggle {
+        cursor: pointer;
+      }
+    
+      .nav__menu .menu__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 1rem;
+        width: 100%;
+        background-color:darkblue;
+      }
+    
+      .nav__menu .nav__list {
+        background-color:aqua;
+        justify-content: start;
+        flex-direction: column;
+        width: 30rem;
+        padding: 0;
+      }
+    
+      .nav__menu .nav__list .nav__item {
+        width: 100%;
+      }
+    
+      .nav__item .nav__link:link,
+      .nav__item .nav__link:visited {
+        width: 100%;
+        display: block;
+        font-size: 1.8rem;
+        color: var(--dark-color);
+      }
+    
+      .nav__list .nav__item .nav__link:last-child:link,
+      .nav__list .nav__item .nav__link:last-child:visited {
+        display: inline-block;
+        width: 50%;
+      }
+    
+      .nav__list .nav__item .nav__link:last-child:hover {
+        color: var(--default-color);
+      }
+    
+      .nav__item .nav__link:hover {
+        color: var(--default-color);
+      }
+    
+    }
+    
+</style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="navigation">
+      <div class="container">
+        <nav class="nav__center">
+          <div class="nav__header">
+            <div class="nav__logo">
+              <h1>READ<span> N </span>SWAP</h1>
+            </div>
+
+            <div class="nav__hamburger">
+              <span>
+                <svg>
+                  <use xlink:href="static/images/sprite.svg#icon-menu"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="nav__menu">
+            <div class="menu__top">
+              <h1 class="nav__category">READ<span> N </span>SWAP</h1>
+              <div class="close__toggle">
+                <svg>
+                  <use xlink:href="static/images/sprite.svg#icon-cross"></use>
+                </svg>
+              </div>
+            </div>
+            <ul class="nav__list">
+              <ul class="nav__item">
+                <a href="{% url 'home' %}" class="nav__link scroll-link">Home</a>
+              </ul>
+
+              <ul class="nav__item">
+                <a href="{% url 'aboutus' %}" class="nav__link scroll-link">About Us</a>
+              </ul>
+
+              <ul class="nav__item">
+                <a href="{% url 'contact' %}" class="nav__link scroll-link">Contact Us</a>
+              </ul>
+
+              <ul class="nav__item">
+                <a href="{% url 'login' %}" class="nav__link">Login</a>
+              </ul>
+
+              <ul class="nav__item">
+                <a href="{% url 'register' %}" class="nav__link">Register</a>
+              </ul>
+            </ul>
+
+           
+          </div>
+        </nav>
+      </div>
+    </div>
+    </header>
+</body>
+</html>

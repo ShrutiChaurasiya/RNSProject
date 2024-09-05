@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="box-element">
+
+				<a  class="btn btn-outline-dark" href="{% url 'home' %}">&#x2190; Continue Shopping</a>
+
+				<br>
+				<br>
+				<table class="table">
+				
+					<tr>
+						<th><h5>Items: <strong>Roses Are Blood Red</strong></h5></th>
+						<th><h5>Total:<strong> Rs. 158</strong></h5></th>
+						<th>
+							<a  style="float:right; margin:5px;" class="btn btn-success" href="{% url 'buy' %}">Buy Now</a>
+						</th>
+					</tr>
+				</table>
+
+			</div>
+		
+
+			<br>
+			
+			<!-- <div class="box-element">
+				<div class="cart-row">
+					<div style="flex:2"></div>
+					<div style="flex:2"><strong>Item : </strong> Roses Are Blood Red </div>
+					<div style="flex:1"><strong>Price : </strong> Rs. 158 </div>
+					<div style="flex:1"><strong>Quantity : </strong> 1 </div>
+					<div style="flex:1"><strong>Total : </strong> Rs. 158/- </div>
+				</div>
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{% static 'images\rosesbloodred.jpg' %}"></div>
+					<div style="flex:2"><p>Roses Are Blood Red</p></div>
+					<div style="flex:1"><p>Rs. 158</p></div>
+					<div style="flex:1">
+						<p class="quantity">1</p>
+						<div class="quantity">
+							<img data-product="{{item.product.id}}" data-action="add" class="chg-quantity update-cart" src="{% static  'images/arrow-up.png' %}">
+					
+							<img data-product="{{item.product.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static  'images/arrow-down.png' %}">
+						</div>
+					</div>
+					
+				</div>
+			
+			</div> -->
+
+
+			<form class="mx-1 mx-md-4 " action="" >
+				
+				<div class="d-flex flex-row align-items-center mb-4">
+				  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+				  <div class="form-outline flex-fill mb-0">
+					<label class="form-label" for="bookname">Book Name</label>
+					<input type="text" id="bookname" name="bookname" class="form-control" value="Roses Are Blood Red" />
+				  </div>
+				</div>
+
+				<div class="d-flex flex-row align-items-center mb-4">
+				  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+				  <div class="form-outline flex-fill mb-0">
+					<label class="form-label" for="amount">Amount</label>
+					<input type="text" id="amount" name="amount" class="form-control" value="Rs. 158" />
+				  </div>
+				</div>
+
+				<div class="d-flex flex-row align-items-center mb-4">
+				  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+				  <div class="form-outline flex-fill mb-0">
+					<label class="form-label" for="description">Description</label>
+					<textarea id="quote" name="description" class="form-control" value="">Romantic & Thriller</textarea>
+				  </div>
+				</div>
+
+				<div class="d-flex flex-row align-items-center mb-4">
+				  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+				  <div class="form-outline flex-fill mb-0">
+					<label class="form-label" for="author">Author</label>
+					<input type="text" id="Author" name="Author" class="form-control" value="Novoneel Chakraborty" />
+				  </div>
+				</div>
+
+				<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+				 
+				  <a href="{% url 'buy' %}" class="btn btn-primary btn-lg">Buy Now</a> &nbsp;&nbsp; 
+				  <a href="{% url 'home' %}" class="btn btn-danger btn-lg">Cancel</a>
+				</div>
+
+			  </form>
+
+			</div>
+			<!-- <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+			  <img src="{% static 'images\rosesbloodred.jpg' %}"
+				class="img-fluid" alt="Sample image">
+
+			</div> -->
+</div>
+</div>
+</div>
+
+</form>
+		</div>
+	</div>
+{% endblock body %}

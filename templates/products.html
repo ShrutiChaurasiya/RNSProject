@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% block title %}
+<title>Products| Read-N-Swap</title>
+{% endblock title %}
+{% block css %}
+<style>
+    /* ============== Featured ============== */
+    .featured__center {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 0;
+    }
+    
+    @media only screen and (max-width: 996px) {
+        .featured__center {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .featured__center {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    
+</style>
+{% endblock css %}
+{% endblock head %}
+{% block body %}
+
+<!-- Featured Section -->
+<section class="section featured" id="featured">
+    <div class="featured__container container">
+    <div class="featured__center">
+        {% for i in product %}
+    <hr>
+    <div class="product">
+        <div class="img__container">
+        <img src="pimage\{{i.bookimage}}" alt="{{i.bookname}}" class="img-cover"/>
+        </div>
+        <div class="product__bottom">
+        <div class="rating">
+            <span>
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+            </svg>
+            </span>
+            <span>
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+            </svg>
+            </span>
+            <span>
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+            </svg>
+            </span>
+            <span>
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+            </svg>
+            </span>
+            <span>
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+            </svg>
+            </span>
+        </div>
+        <h3>{{i.bookname}}</h3>
+        <p>{{i.author_name}}</p>
+        <h5>{{i.book_desc}}</h5>
+        <h6>₹ {{i.book_price}}</h6>
+        <a href="{% url 'cart' id.id %}">Add To Cart</a>
+        </div>
+    </div>
+    
+{% endfor %}
+
+{% endblock body %}
+  
+</section>

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+	
+		<div class="featured__center">
+			{% for i in product %}
+			<div class="product">
+			  <div class="img__container">
+				<img src="media\{{i.bookimage}}" alt="book img" class="img-cover"/>
+			  </div>
+			  <div class="product__bottom">
+				<div class="rating">
+				  <span>
+					<svg>
+					  <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+					</svg>
+				  </span>
+				  <span>
+					<svg>
+					  <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+					</svg>
+				  </span>
+				  <span>
+					<svg>
+					  <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+					</svg>
+				  </span>
+				  <span>
+					<svg>
+					  <use xlink:href="static/images/sprite.svg#icon-star-full"></use>
+					</svg>
+				  </span>
+				  <span>
+					<svg>
+					  <use xlink:href="static/images/sprite.svg#icon-star-empty"></use>
+					</svg>
+				  </span>
+				</div>
+				<h3>{{i.bookname}}</h3>
+				<h4>{{i.book_desc}}</h4>
+				<h5>₹ {{i.book_price}}</h5>
+				<!-- <a href="{% url 'cart' %}">Add To Cart</a> -->
+				<button data-product="{{i.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+				
+				<a class="btn btn-outline-success" href="#">View</a>
+			  </div>
+			</div>
+		   
+		  {% endfor %}
+			
+
+				<h4 style="display: inline-block; float: right"><strong>Rs {{product.price}}</strong></h4>
+
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+{% endblock content %}

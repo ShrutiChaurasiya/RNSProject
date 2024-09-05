@@ -1,0 +1,128 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+    <title>footer</title>
+</head>
+
+<style>
+    
+.footer {
+  background-color: var(--dark-color);
+  padding: 6rem 1rem;
+  line-height: 3rem;
+}
+
+.footer-top__box span svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: var(--default-color);
+}
+
+.footer-top__box span {
+  margin-right: 1rem;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: var(--grey-color);
+}
+
+.footer-top__box a:link,
+.footer-top__box a:visited {
+  display: block;
+  color: var(--grey);
+  font-size: 1.4rem;
+  transition: 0.6s;
+}
+
+.footer-top__box a:hover {
+  color: var(--default-color);
+}
+
+.footer-top__box div {
+  color: var(--grey);
+  font-size: 1.4rem;
+}
+
+.footer-top__box h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+</style>
+<body>
+  
+    <!-- Footer -->
+ <footer id="footer" class="section footer">
+     <div class="container">
+         <div class="footer__top">
+             <div class="footer-top__box">
+                 <h3>EXTRAS</h3>
+                 <a href="#">Brands</a>
+                 <a href="#">Gift Certificates</a>
+          <a href="#">Affiliate</a>
+          <a href="#">Specials</a>
+          <a href="#">Site Map</a>
+        </div>
+        <div class="footer-top__box">
+          <h3>INFORMATION</h3>
+          <a href="aboutus.jsp">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="t&c.jsp">Terms & Conditions</a>
+          <a href="contact.jsp">Contact Us</a>
+          <a href="contact.jsp">Site Map</a>
+        </div>
+        <div class="footer-top__box">
+            <h3>MY ACCOUNT</h3>
+            <a href="#">My Account</a>
+            <a href="#">Order History</a>
+            <a href="#">Wish List</a>
+            <a href="#">Newsletter</a>
+            <a href="#">Returns</a>
+        </div>
+        <div class="footer-top__box">
+            <h3>CONTACT US</h3>
+            <div>
+                <span>
+                    <svg>
+                        <use xlink:href="./images/sprite.svg#icon-location"></use>
+                    </svg>
+                </span>
+                09 Book Palace , Mumbai 400001. 
+            </div>
+            <div>
+                <span>
+                    <svg>
+                        <use xlink:href="./images/sprite.svg#icon-envelop"></use>
+                    </svg>
+                </span>
+                Read N Swap09@gmail.com
+            </div>
+            <div>
+                <span>
+                    <svg>
+                        <use xlink:href="./images/sprite.svg#icon-phone"></use>
+                    </svg>
+                </span>
+                +91 9654758695
+            </div>
+            <div>
+                <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
+              </svg>
+            </span>
+            The Dream City, MUMBAI
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</footer>
+  <!-- End Footer -->
+</body>
+</html>

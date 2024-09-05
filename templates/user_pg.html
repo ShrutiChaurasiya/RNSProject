@@ -1,0 +1,120 @@
+{% include 'admin_navbar.html' %}
+{% block head %}
+
+{% block css %}
+  <style>
+    .card-deck{
+        padding: 5px 8px;
+        gap: 2px;
+}
+    
+  </style>
+{% endblock css %}
+
+{% endblock head %}
+
+
+{% block body %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'admin_homepg' %}"><i class="bi bi-house-fill"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'admin_login' %}">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'user_pg' %}">Users</a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'admin_homepg' %}">Books</a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link active" href="{% url 'logout' %}">Exit</a>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+<br>
+<section>
+    <h1 style="margin-left: 15cm;"><span style="font-family: 'Times New Roman', Times, serif;">User Model Access</span></h1><hr>
+  
+		<section class="ftco-section bg-light">
+      <div>
+        
+        <a class="btn btn-warning btn-lg m-3" role="button" aria-disabled="true" href="{% url 'user_pg' %}"> +  User_Model</a>
+      </div><br>
+    	<div class="container">
+			
+    		<div class="row">
+				{% for i in book_obj %}
+    			<div class="col-md-4">
+    				<div class="card-wrap rounded ">
+    					<div class="text">
+    						<h3 class="mb-0"><a href="" name="email">{{i.email}}</a></h3><br><br>
+                <div class="d-flex mb-3">
+                  <p class="price ml-auto" name="name">Name: {{i.name}}</p>
+                </div>
+
+                <div class="d-flex mb-3">
+                  <p class="price ml-auto" name="email">Email: {{i.email}}</p>
+                </div>
+
+                <div class="d-flex mb-3">
+                  <p class="price ml-auto" name="address">Address: {{i.address}}</p>
+                </div>
+                <div class="d-flex mb-3">
+                  <p class="price ml-auto"name="city">City: {{i.city}}</p>
+                </div>
+    						<div class="d-flex mb-3">
+	    						<p class="price ml-auto" name="state">State: {{i.state}}</p>
+                </div>
+                <div class="d-flex mb-3">
+                  <p class="price ml-auto" name="zip">Zip: {{i.zip}}</p>
+                </div>
+
+                <div class="d-flex mb-3">
+                  <p class="price ml-auto" name="cardName">Card Name: {{i.cardName}}</p>
+                </div>
+                <div class="d-flex mb-3">
+                  <p class="price ml-auto" name="cardNum">Card Number: {{i.cardNum}}</p>
+                </div>
+                            
+    					</div>
+    				</div>
+            <table>
+              <tr>
+                <td>
+                  <form action = "{% url 'update_user' i.id %}" method="get">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{i.id}}">
+                    <input class="btn btn-dark" type="submit" value="  Edit  ">
+                    </form>
+                  </td>
+              
+                <td>
+                  <form action = "{% url 'delete_user' i.id %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="id" value="{{i.id}}">
+                    <input class="btn btn-danger" onclick="return confirm('Are you sure you want to delete {{i.name}}?')" type="submit" value="Delete">
+                    </form>
+                  </td>
+
+                  </tr>
+                </table>
+                <hr>
+              </div>
+              
+				{% endfor %}
+
+</section>
+{% endblock body %}
