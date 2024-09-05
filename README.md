@@ -14,6 +14,8 @@ Prerequisites
 
 Admin Control
 
+ScreenShots
+
 # About the Project
 
 Read Swap is a full-stack application designed for book lovers to buy, sell, and rent books. This project was developed as part of my Final Year Project, showcasing my skills in both frontend and backend development.
@@ -52,3 +54,19 @@ Pillows: for displaying Images.
 username: admin 
 
 password: 123
+
+# ScreenShots
+
+1. Index Page  ![image](https://github.com/user-attachments/assets/0442f85d-3627-4cb5-b14d-eddf64a34102)
+![image](https://github.com/user-attachments/assets/02100941-827f-4d9e-a36d-e93939e8bd24)![image](https://github.com/user-attachments/assets/0822403b-1e75-497b-959d-a19a3573c021)
+
+2. Login Page    ![image](https://github.com/user-attachments/assets/87e2b186-743e-4c80-98f2-1ec28229633e)
+
+3. Register Page  ![image](https://github.com/user-attachments/assets/f40c0175-ab94-4b5a-a963-1bedd3af12a0)
+
+4. Add to Cart Page   ![image](https://github.com/user-attachments/assets/1f781d99-4b52-4e20-a312-33f81f89050b)
+
+5. Admin Login Page    
+6. Buy Now Page       ![image](https://github.com/user-attachments/assets/4579796e-3816-451f-85c1-95ec309cb832)
+
+7. Transaction Page    ![image](https://github.com/user-attachments/assets/38d6c8c2-5bc7-4caa-b63e-9cc5a4e5c2a1)
